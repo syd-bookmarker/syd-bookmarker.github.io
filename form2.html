@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja" style="font-size: 16px;">
+<title>管理画面ログイン2</title>
+<style>
+div.formBox {max-width: 420px; padding: 50px; background: #fff; margin: 50px auto;}
+h2.title {color: #9a55aa; text-align: center; color: #D0B32F; font-size: 1.4rem; margin: -0.5em 0 1em;}
+input.inputBox {padding: 12px; border: 1px solid #ccc; border-radius: 2px; font-size: 1.2rem;}
+input.button {background: #D0B32F; border: none; font-weight: bold; color: #fff; width: 180px; padding: 10px 10px; border-radius: 8px; font-size: 1.2rem;}
+</style>
+</head>
+<body style="background-color: #f1f1f1; text-align: center;">
+	<div class="formBox">
+    <div>
+        <h2 class="title">管理画面ログイン2</h2>
+        <div>
+            <form id="login_form" action="">
+                <div style="margin-top: 30px;">
+                	<label for="user_id">ユーザーID</label>
+                    <input type="text" name="user_id1" id="user_id1" class="inputBox" style="width: 47px;" />
+                    -
+                    <input type="text" name="user_id2" id="user_id2" class="inputBox" style="width: 47px;" />
+                    -
+                    <input type="text" name="user_id3" id="user_id3" class="inputBox" style="width: 47px;" />
+                </div>
+                <div style="margin-top: 30px;">
+                	<label for="password">パスワード</label>
+                    <input type="password" name="password" id="password" class="inputBox" />
+                </div>
+                <div style="margin-top: 30px;">
+                    <div>
+                        <input type="button" value="ログイン" onclick="alert('ログインボタンがクリックされました。');" class="button" />
+                    </div>
+                </div>
+                <p style="margin-top: 30px; color: #999;">練習用の入力フォームです。ログインはできません。</p>
+            </form>
+        </div>
+</body>
+</html>
