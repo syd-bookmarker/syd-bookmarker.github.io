@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja" style="font-size: 16px;">
+<title>受注データ検索</title>
+<style>
+div.formBox {max-width: 420px; padding: 50px; background: #fff; margin: 50px auto;}
+h2.title {color: #9a55aa; text-align: center; color: #D0B32F; font-size: 1.4rem; margin: -0.5em 0 1em;}
+input.inputBox {padding: 12px; border: 1px solid #ccc; border-radius: 2px; font-size: 1.2rem;}
+input.button {background: #D0B32F; border: none; font-weight: bold; color: #fff; width: 180px; padding: 10px 10px; border-radius: 8px; font-size: 1.2rem;}
+</style>
+</head>
+<body style="background-color: #f1f1f1; text-align: center;">
+	<div class="formBox">
+    <div>
+        <h2 class="title">受注データ検索</h2>
+        <div>
+            <form id="search_form" action="">
+                <div style="margin-top: 30px; display: flex; justify-content: center;">
+                	<div style="display: grid; align-content: center; width: 100px;">ステータス</div>
+                	<div style="text-align: left; width: 250px;">
+		            	<input type="radio" id="preparing" name="status" value="preparing" checked /><label for="preparing">出荷準備中</label><br />
+		            	<input type="radio" id="shipped" name="status" value="shipped" /><label for="shipped">出荷済み</label><br />
+		            	<input type="radio" id="cannceled" name="status" value="cannceled" /><label for="cannceled">キャンセル済み</label><br />
+	            	</div>
+                </div>
+                <div style="margin-top: 30px; display: flex; justify-content: center;">
+                	<div style="display: grid; align-content: center; width: 100px;">エリア</div>
+                	<div style="text-align: left; width: 250px;">
+		            	<input type="checkbox" id="hokkaido" name="area" value="hokkaido" /><label for="hokkaido">北海道</label>
+		            	<input type="checkbox" id="tohoku" name="area" value="tohoku" /><label for="tohoku">東北</label>
+		            	<input type="checkbox" id="kanto" name="area" value="kanto" /><label for="kanto">関東</label>
+		            	<input type="checkbox" id="chubu" name="area" value="chubu" /><label for="chubu">中部</label>
+		            	<input type="checkbox" id="kinki" name="area" value="kinki" /><label for="kinki">近畿</label>
+		            	<input type="checkbox" id="chugoku" name="area" value="chugoku" /><label for="chugoku">中国</label>
+		            	<input type="checkbox" id="shikoku" name="area" value="shikoku" /><label for="shikoku">四国</label>
+		            	<input type="checkbox" id="kyushu" name="area" value="kyushu" /><label for="kyushu">九州</label>
+	            	</div>
+                </div>
+                <div style="margin-top: 30px;">
+                	<label for="min-amount">最小金額</label>
+                    <input type="text" name="min-amount" id="min-amount" class="inputBox" />
+                </div>
+                <div style="margin-top: 30px;">
+                	<label for="max-amount">最大金額</label>
+                    <input type="text" name="max-amount" id="max-amount" class="inputBox" />
+                </div>
+                <div style="margin-top: 30px;">
+                    <div>
+                        <input type="button" value="検索" id="submit-button" onclick="alert('検索ボタンがクリックされました。');" class="button" />
+                    </div>
+                </div>
+                <p style="margin-top: 30px; color: #999;">練習用のフォームです。検索はできません。</p>
+            </form>
+        </div>
+</body>
+</html>
