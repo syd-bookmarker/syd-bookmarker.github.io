@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja" style="font-size: 16px;">
+<head>
+    <title>受注データ検索2</title>
+    <style>
+    div.formBox {max-width: 420px; padding: 50px; background: #fff; margin: 50px auto;}
+    h2.title {color: #9a55aa; text-align: center; color: #D0B32F; font-size: 1.4rem; margin: -0.5em 0 1em;}
+    input.inputBox {padding: 12px; border: 1px solid #ccc; border-radius: 2px; font-size: 1.2rem;}
+    input.button {background: #D0B32F; border: none; font-weight: bold; color: #fff; width: 180px; padding: 10px 10px; border-radius: 8px; font-size: 1.2rem;}
+    </style>
+</head>
+<body style="background-color: #f1f1f1; text-align: center;">
+    <div class="formBox">
+        <h2 class="title">受注データ検索2</h2>
+        <div>
+            <form id="search_form" action="">
+                <div style="margin-top: 30px; display: flex; justify-content: center;">
+                	<div style="display: grid; align-content: center; width: 100px;">ステータス</div>
+                	<div style="text-align: left; width: 250px;" class="status-input">
+		            	<input type="checkbox" id="preparing" name="preparing" value="preparing" /><label for="preparing">出荷準備中</label><br />
+		            	<input type="checkbox" id="shipped" name="shipped" value="shipped" /><label for="shipped">出荷済み</label><br />
+		            	<input type="checkbox" id="cannceled" name="cannceled" value="cannceled" /><label for="cannceled">キャンセル済み</label><br />
+	            	</div>
+                </div>
+                <div style="margin-top: 30px; display: flex; justify-content: center;">
+                	<div style="display: grid; align-content: center; width: 100px;">都道府県</div>
+                	<div style="text-align: left; width: 250px;" class="prefecture-input">
+		            	<input type="checkbox" id="kanto-ibaraki" name="prefecture" value="kanto-ibaraki" /><label for="kanto-ibaraki">茨城県</label>
+		            	<input type="checkbox" id="kanto-tochigi" name="prefecture" value="kanto-tochigi" /><label for="kanto-tochigi">栃木県</label>
+		            	<input type="checkbox" id="kanto-gunma" name="prefecture" value="kanto-gunma" /><label for="kanto-gunma">群馬県</label>
+		            	<input type="checkbox" id="kanto-saitama" name="prefecture" value="kanto-saitama" /><label for="kanto-saitama">埼玉県</label>
+		            	<input type="checkbox" id="kanto-chiba" name="prefecture" value="kanto-chiba" /><label for="kanto-chiba">千葉県</label>
+		            	<input type="checkbox" id="kanto-tokyo" name="prefecture" value="kanto-tokyo" /><label for="kanto-tokyo">東京都</label>
+		            	<input type="checkbox" id="kanto-kanagawa" name="prefecture" value="kanto-kanagawa" /><label for="kanto-kanagawa">神奈川県</label>
+		            	<input type="checkbox" id="kansai-shiga" name="prefecture" value="kansai-shiga" /><label for="kansai-shiga">滋賀県</label>
+		            	<input type="checkbox" id="kansai-kyoto" name="prefecture" value="kansai-kyoto" /><label for="kansai-kyoto">京都府</label>
+		            	<input type="checkbox" id="kansai-osaka" name="prefecture" value="kansai-osaka" /><label for="kansai-osaka">大阪府</label>
+		            	<input type="checkbox" id="kansai-hyogo" name="prefecture" value="kansai-hyogo" /><label for="kansai-hyogo">兵庫県</label>
+		            	<input type="checkbox" id="kansai-nara" name="prefecture" value="kansai-nara" /><label for="kansai-nara">奈良県</label>
+		            	<input type="checkbox" id="kansai-wakayama" name="prefecture" value="kansai-wakayama" /><label for="kansai-wakayama">和歌山県</label>
+	            	</div>
+                </div>
+                <div style="margin-top: 30px;">
+                    <div>
+                        <input type="button" value="検索" id="submit-button" onclick="alert('検索ボタンがクリックされました。');" class="button" />
+                    </div>
+                </div>
+                <p style="margin-top: 30px; color: #999;">練習用のフォームです。検索はできません。</p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
