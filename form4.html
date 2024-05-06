@@ -3,7 +3,7 @@
 <head>
     <title>受注データ検索2</title>
     <style>
-    div.formBox {max-width: 420px; padding: 50px; background: #fff; margin: 50px auto;}
+    div.formBox {max-width: 620px; padding: 50px; background: #fff; margin: 50px auto;}
     h2.title {color: #9a55aa; text-align: center; color: #D0B32F; font-size: 1.4rem; margin: -0.5em 0 1em;}
     input.inputBox {padding: 12px; border: 1px solid #ccc; border-radius: 2px; font-size: 1.2rem;}
     input.button {background: #D0B32F; border: none; font-weight: bold; color: #fff; width: 180px; padding: 10px 10px; border-radius: 8px; font-size: 1.2rem;}
@@ -15,29 +15,73 @@
         <div>
             <form id="search_form" action="">
                 <div style="margin-top: 30px; display: flex; justify-content: center;">
-                	<div style="display: grid; align-content: center; width: 100px;">ステータス</div>
-                	<div style="text-align: left; width: 250px;" class="status-input">
-		            	<input type="checkbox" id="preparing" name="preparing" value="preparing" /><label for="preparing">出荷準備中</label><br />
-		            	<input type="checkbox" id="shipped" name="shipped" value="shipped" /><label for="shipped">出荷済み</label><br />
-		            	<input type="checkbox" id="cannceled" name="cannceled" value="cannceled" /><label for="cannceled">キャンセル済み</label><br />
+                	<div style="display: grid; align-content: center; width: 100px;">ステータス： </div>
+                	<div style="text-align: left; width: 450px;" class="status-input">
+		            	<input type="checkbox" id="preparing" name="preparing" value="preparing" /><label for="preparing">出荷準備中</label>
+		            	<input type="checkbox" id="shipped" name="shipped" value="shipped" /><label for="shipped">出荷済み</label>
+		            	<input type="checkbox" id="cannceled" name="cannceled" value="cannceled" /><label for="cannceled">キャンセル済み</label>
 	            	</div>
                 </div>
                 <div style="margin-top: 30px; display: flex; justify-content: center;">
-                	<div style="display: grid; align-content: center; width: 100px;">都道府県</div>
-                	<div style="text-align: left; width: 250px;" class="prefecture-input">
-		            	<input type="checkbox" id="kanto-ibaraki" name="prefecture" value="kanto-ibaraki" /><label for="kanto-ibaraki">茨城県</label>
-		            	<input type="checkbox" id="kanto-tochigi" name="prefecture" value="kanto-tochigi" /><label for="kanto-tochigi">栃木県</label>
-		            	<input type="checkbox" id="kanto-gunma" name="prefecture" value="kanto-gunma" /><label for="kanto-gunma">群馬県</label>
-		            	<input type="checkbox" id="kanto-saitama" name="prefecture" value="kanto-saitama" /><label for="kanto-saitama">埼玉県</label>
-		            	<input type="checkbox" id="kanto-chiba" name="prefecture" value="kanto-chiba" /><label for="kanto-chiba">千葉県</label>
-		            	<input type="checkbox" id="kanto-tokyo" name="prefecture" value="kanto-tokyo" /><label for="kanto-tokyo">東京都</label>
-		            	<input type="checkbox" id="kanto-kanagawa" name="prefecture" value="kanto-kanagawa" /><label for="kanto-kanagawa">神奈川県</label>
-		            	<input type="checkbox" id="kansai-shiga" name="prefecture" value="kansai-shiga" /><label for="kansai-shiga">滋賀県</label>
-		            	<input type="checkbox" id="kansai-kyoto" name="prefecture" value="kansai-kyoto" /><label for="kansai-kyoto">京都府</label>
-		            	<input type="checkbox" id="kansai-osaka" name="prefecture" value="kansai-osaka" /><label for="kansai-osaka">大阪府</label>
-		            	<input type="checkbox" id="kansai-hyogo" name="prefecture" value="kansai-hyogo" /><label for="kansai-hyogo">兵庫県</label>
-		            	<input type="checkbox" id="kansai-nara" name="prefecture" value="kansai-nara" /><label for="kansai-nara">奈良県</label>
-		            	<input type="checkbox" id="kansai-wakayama" name="prefecture" value="kansai-wakayama" /><label for="kansai-wakayama">和歌山県</label>
+                	<div style="display: grid; align-content: center; width: 100px;">都道府県： </div>
+                	<div style="text-align: left; width: 450px;" class="prefecture-input">
+				<span style="font-weight: bold;">北海道</span>
+				<input type="checkbox" id="hokkaido-hokkaido" name="prefecture" value="hokkaido-hokkaido" /><label for="hokkaido-hokkaido">北海道</label><br />
+				<span style="font-weight: bold;">東北</span>
+				<input type="checkbox" id="tohoku-aomori" name="prefecture" value="tohoku-aomori" /><label for="tohoku-aomori">青森県</label>
+				<input type="checkbox" id="tohoku-iwate" name="prefecture" value="tohoku-iwate" /><label for="tohoku-iwate">岩手県</label>
+				<input type="checkbox" id="tohoku-miyagi" name="prefecture" value="tohoku-miyagi" /><label for="tohoku-miyagi">宮城県</label>
+				<input type="checkbox" id="tohoku-akita" name="prefecture" value="tohoku-akita" /><label for="tohoku-akita">秋田県</label>
+				<input type="checkbox" id="tohoku-yamagata" name="prefecture" value="tohoku-yamagata" /><label for="tohoku-yamagata">山形県</label>
+				<input type="checkbox" id="tohoku-fukushima" name="prefecture" value="tohoku-fukushima" /><label for="tohoku-fukushima">福島県</label><br />
+				<span style="font-weight: bold;">関東</span>
+				<input type="checkbox" id="kanto-ibaraki" name="prefecture" value="kanto-ibaraki" /><label for="kanto-ibaraki">茨城県</label>
+				<input type="checkbox" id="kanto-tochigi" name="prefecture" value="kanto-tochigi" /><label for="kanto-tochigi">栃木県</label>
+				<input type="checkbox" id="kanto-gunma" name="prefecture" value="kanto-gunma" /><label for="kanto-gunma">群馬県</label>
+				<input type="checkbox" id="kanto-saitama" name="prefecture" value="kanto-saitama" /><label for="kanto-saitama">埼玉県</label>
+				<input type="checkbox" id="kanto-chiba" name="prefecture" value="kanto-chiba" /><label for="kanto-chiba">千葉県</label>
+				<input type="checkbox" id="kanto-tokyo" name="prefecture" value="kanto-tokyo" /><label for="kanto-tokyo">東京都</label>
+				<input type="checkbox" id="kanto-kanagawa" name="prefecture" value="kanto-kanagawa" /><label for="kanto-kanagawa">神奈川県</label><br />
+				<span style="font-weight: bold;">北陸</span>
+				<input type="checkbox" id="hokuriku-toyama" name="prefecture" value="hokuriku-toyama" /><label for="hokuriku-toyama">富山県</label>
+				<input type="checkbox" id="hokuriku-ishikawa" name="prefecture" value="hokuriku-ishikawa" /><label for="hokuriku-ishikawa">石川県</label>
+				<input type="checkbox" id="hokuriku-fukui" name="prefecture" value="hokuriku-fukui" /><label for="hokuriku-fukui">福井県</label><br />
+				<span style="font-weight: bold;">甲信越</span>
+				<input type="checkbox" id="koshinetsu-niigata" name="prefecture" value="koshinetsu-niigata" /><label for="koshinetsu-niigata">新潟県</label>
+				<input type="checkbox" id="koshinetsu-yamanashi" name="prefecture" value="koshinetsu-yamanashi" /><label for="koshinetsu-yamanashi">山梨県</label>
+				<input type="checkbox" id="koshinetsu-nagano" name="prefecture" value="koshinetsu-nagano" /><label for="koshinetsu-nagano">長野県</label><br />
+				<span style="font-weight: bold;">東海</span>
+				<input type="checkbox" id="tokai-gifu" name="prefecture" value="tokai-gifu" /><label for="tokai-gifu">岐阜県</label>
+				<input type="checkbox" id="tokai-shizuoka" name="prefecture" value="tokai-shizuoka" /><label for="tokai-shizuoka">静岡県</label>
+				<input type="checkbox" id="tokai-aichi" name="prefecture" value="tokai-aichi" /><label for="tokai-aichi">愛知県</label>
+				<input type="checkbox" id="tokai-mie" name="prefecture" value="tokai-mie" /><label for="tokai-mie">三重県</label><br />
+				<span style="font-weight: bold;">近畿</span>
+				<input type="checkbox" id="kinki-shiga" name="prefecture" value="kinki-shiga" /><label for="kinki-shiga">滋賀県</label>
+				<input type="checkbox" id="kinki-kyoto" name="prefecture" value="kinki-kyoto" /><label for="kinki-kyoto">京都府</label>
+				<input type="checkbox" id="kinki-osaka" name="prefecture" value="kinki-osaka" /><label for="kinki-osaka">大阪府</label>
+				<input type="checkbox" id="kinki-hyogo" name="prefecture" value="kinki-hyogo" /><label for="kinki-hyogo">兵庫県</label>
+				<input type="checkbox" id="kinki-nara" name="prefecture" value="kinki-nara" /><label for="kinki-nara">奈良県</label>
+				<input type="checkbox" id="kinki-wakayama" name="prefecture" value="kinki-wakayama" /><label for="kinki-wakayama">和歌山県</label><br />
+				<span style="font-weight: bold;">中国</span>
+				<input type="checkbox" id="chugoku-tottori" name="prefecture" value="chugoku-tottori" /><label for="chugoku-tottori">鳥取県</label>
+				<input type="checkbox" id="chugoku-shimane" name="prefecture" value="chugoku-shimane" /><label for="chugoku-shimane">島根県</label>
+				<input type="checkbox" id="chugoku-okayama" name="prefecture" value="chugoku-okayama" /><label for="chugoku-okayama">岡山県</label>
+				<input type="checkbox" id="chugoku-hiroshima" name="prefecture" value="chugoku-hiroshima" /><label for="chugoku-hiroshima">広島県</label>
+				<input type="checkbox" id="chugoku-yamaguchi" name="prefecture" value="chugoku-yamaguchi" /><label for="chugoku-yamaguchi">山口県</label><br />
+				<span style="font-weight: bold;">四国</span>
+				<input type="checkbox" id="shikoku-tokushima" name="prefecture" value="shikoku-tokushima" /><label for="shikoku-tokushima">徳島県</label>
+				<input type="checkbox" id="shikoku-kagawa" name="prefecture" value="shikoku-kagawa" /><label for="shikoku-kagawa">香川県</label>
+				<input type="checkbox" id="shikoku-ehime" name="prefecture" value="shikoku-ehime" /><label for="shikoku-ehime">愛媛県</label>
+				<input type="checkbox" id="shikoku-kochi" name="prefecture" value="shikoku-kochi" /><label for="shikoku-kochi">高知県</label><br />
+				<span style="font-weight: bold;">九州</span>
+				<input type="checkbox" id="kyushu-fukuoka" name="prefecture" value="kyushu-fukuoka" /><label for="kyushu-fukuoka">福岡県</label>
+				<input type="checkbox" id="kyushu-saga" name="prefecture" value="kyushu-saga" /><label for="kyushu-saga">佐賀県</label>
+				<input type="checkbox" id="kyushu-nagasaki" name="prefecture" value="kyushu-nagasaki" /><label for="kyushu-nagasaki">長崎県</label>
+				<input type="checkbox" id="kyushu-kumamoto" name="prefecture" value="kyushu-kumamoto" /><label for="kyushu-kumamoto">熊本県</label>
+				<input type="checkbox" id="kyushu-oita" name="prefecture" value="kyushu-oita" /><label for="kyushu-oita">大分県</label>
+				<input type="checkbox" id="kyushu-miyazaki" name="prefecture" value="kyushu-miyazaki" /><label for="kyushu-miyazaki">宮崎県</label>
+				<input type="checkbox" id="kyushu-kagoshima" name="prefecture" value="kyushu-kagoshima" /><label for="kyushu-kagoshima">鹿児島県</label>
+				<input type="checkbox" id="kyushu-okinawa" name="prefecture" value="kyushu-okinawa" /><label for="kyushu-okinawa">沖縄県</label>
 	            	</div>
                 </div>
                 <div style="margin-top: 30px;">
