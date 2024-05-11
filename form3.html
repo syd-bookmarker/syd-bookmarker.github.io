@@ -6,7 +6,7 @@
     div.formBox {max-width: 420px; padding: 50px; background: #fff; margin: 50px auto;}
     h2.title {color: #9a55aa; text-align: center; color: #D0B32F; font-size: 1.4rem; margin: -0.5em 0 1em;}
     input.inputBox {padding: 12px; border: 1px solid #ccc; border-radius: 2px; font-size: 1.2rem;}
-    .button {background: #D0B32F; border: none; font-weight: bold; color: #fff; width: 180px; padding: 10px 10px; border-radius: 8px; font-size: 1.2rem; display: inline-block;}
+    a.button {background: #D0B32F; border: none; font-weight: bold; color: #fff; width: 180px; padding: 10px 10px; border-radius: 8px; font-size: 1.2rem; display: inline-block; text-decoration: none;}
     </style>
 </head>
 <body style="background-color: #f1f1f1; text-align: center;">
@@ -45,7 +45,7 @@
                 </div>
                 <div style="margin-top: 30px;">
                     <div>
-                        <a id="submit-button" onclick="alert('検索ボタンがクリックされました。');" class="button" href="">検索</a>
+                        <a href="javascript:void(0)" id="submit-button" onclick="alert('検索ボタンがクリックされました。');" class="button">検索</a>
                     </div>
                 </div>
                 <p style="margin-top: 30px; color: #999;">練習用のフォームです。検索はできません。</p>
