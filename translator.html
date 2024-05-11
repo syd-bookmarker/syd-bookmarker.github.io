@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja" style="font-size: 16px;">
+<head>
+	<title>ブックマークレットを&lt;a&gt;タグに埋め込むツール</title>
+	<style>
+	div.formBox {max-width: 620px; padding: 50px; background: #fff; margin: 50px auto;}
+	h2.title {color: #9a55aa; text-align: center; color: #D0B32F; font-size: 1.4rem; margin: -0.5em 0 1em;}
+	.button {background: #D0B32F; border: none; font-weight: bold; color: #fff; width: 180px; padding: 10px 10px; border-radius: 8px; font-size: 1.2rem;}
+	.triangle {background: #D0B32F; height: 30px; width: 200px; clip-path: polygon(0 0, 100% 0, 50% 100%);}
+	</style>
+</head>
+<body style="background-color: #f1f1f1; text-align: center;">
+	<div class="formBox">
+		<h2 class="title">ブックマークレットを&lt;a&gt;タグに埋め込むツール</h2>
+		<div style="margin-top: 30px;">
+			作成したブックマークレットを貼り付けてください。
+			<textarea id="input-textarea" style="width: 600px; height: 100px;"></textarea>
+		</div>
+		<div>
+			<input type="radio" id="only-a" name="mode" value="only-a" checked /><label for="only-a">&lt;a&gt;タグのみ</label>
+			<input type="radio" id="with-all" name="mode" value="with-all" /><label for="with-all">&lt;html&gt;&lt;head&gt;&lt;body&gt;を含む</label>
+		</div>
+		<div style="margin-top: 30px;">
+			<div>
+				<button class="button">変換</button>
+			</div>
+		</div>
+		<div class="triangle" style="margin-top: 20px; display: inline-block;"></div>
+		<div style="margin-top: 30px;">
+			変換結果（.html という拡張子を付けてファイルに保存してください）
+			<textarea id="output-textarea" style="width: 600px; height: 300px;"></textarea>
+		</div>
+		<p style="margin-top: 30px; color: #999;">練習用のフォームです。検索はできません。</p>
+	</div>
+	<script>
+	document.querySelector("button").addEventListener("click", function() {
+		let str = document.querySelector("#input-textarea").value;
+		str = str.replace(/\r?\n/g, ' ').replaceAll('&', "&amp;").replaceAll('"', "&quot;").replaceAll('<', "&lt;").replaceAll('>', "&gt;");
+		str = '<a href="' + str + '">ブックマークレット</a>';
+		if (document.querySelector("#with-all").checked) {
+			str = '<html>\n<head>\n<title>ブックマークレット</title>\n</head>\n<body>\n' + str + '<br />\n上のリンクをブックマークバーへドラッグしてください。\n</body>';
+		}
+		document.querySelector("#output-textarea").value = str;
+	});
+	</script>
+</body>
+</html>
