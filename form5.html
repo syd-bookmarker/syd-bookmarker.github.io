@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja" style="font-size: 16px;">
+<head>
+	<title>お客様問い合わせ登録フォーム</title>
+	<style>
+	div.header {max-width: 700px; margin: 10px auto; text-align: left;}
+	div.formBox {max-width: 620px; padding: 50px; background: #fff; margin: 10px auto;}
+	h2.title {color: #9a55aa; text-align: center; color: #D0B32F; font-size: 1.4rem; margin: -0.5em 0 1em;}
+	input.inputBox {padding: 12px; border: 1px solid #ccc; border-radius: 2px; font-size: 1.2rem;}
+	a.button {background: #D0B32F; border: none; font-weight: bold; color: #fff; width: 120px; padding: 10px 10px; border-radius: 8px; font-size: 1.2rem; display: inline-block; margin-inline: 10px; text-decoration: none;}
+	</style>
+</head>
+<body style="background-color: #f1f1f1; text-align: center;">
+	<div class="header">
+		ログイン中のユーザーID： <span style="font-weight: bold;">syd0391</span>
+	</div>
+	<div class="formBox">
+		<h2 class="title">お客様問い合わせ登録フォーム</h2>
+		<div>
+			<form id="search_form" action="">
+				<div style="margin-top: 30px; display: flex; justify-content: center;">
+					<div style="display: grid; align-content: center; width: 120px;">問い合わせ日</div>
+					<div style="text-align: left; width: 420px;">
+					<input type="text" name="received-date" id="received-date" class="inputBox" />
+					</div>
+				</div>
+				<div style="margin-top: 30px; display: flex; justify-content: center;">
+					<div style="display: grid; align-content: center; width: 120px;">登録者</div>
+					<div style="text-align: left; width: 420px;">
+					<input type="text" name="registered-by" id="registered-by" class="inputBox" />
+					</div>
+				</div>
+				<div style="margin-top: 30px; display: flex; justify-content: center;">
+					<div style="display: grid; align-content: center; width: 120px;">お客様番号</div>
+					<div style="text-align: left; width: 420px;">
+					<input type="text" name="customer-number" id="customer-number" class="inputBox" />
+					</div>
+				</div>
+				<div style="margin-top: 30px; display: flex; justify-content: center;">
+					<div style="display: grid; align-content: center; width: 120px;">お客様電話番号</div>
+					<div style="text-align: left; width: 420px;">
+					<input type="text" name="customer-tel" id="customer-tel" class="inputBox" />
+					</div>
+				</div>
+				<div style="margin-top: 30px; display: flex; justify-content: center;">
+					<div style="display: grid; align-content: center; width: 120px;">お客様メールアドレス</div>
+					<div style="text-align: left; width: 420px;">
+					<input type="text" name="customer-email" id="customer-email" class="inputBox" />
+					</div>
+				</div>
+				<div style="margin-top: 30px; display: flex; justify-content: center;">
+					<div style="display: grid; align-content: center; width: 120px;">顧客エリア</div>
+					<div style="text-align: left; width: 420px;">
+						<input type="radio" id="hokkaido" name="area" value="hokkaido" /><label for="hokkaido">北海道</label>
+						<input type="radio" id="tohoku" name="area" value="tohoku" /><label for="tohoku">東北</label>
+						<input type="radio" id="kanto" name="area" value="kanto" /><label for="kanto">関東</label>
+						<input type="radio" id="chubu" name="area" value="chubu" /><label for="chubu">中部</label>
+						<input type="radio" id="kinki" name="area" value="kinki" /><label for="kinki">近畿</label>
+						<input type="radio" id="chugoku" name="area" value="chugoku" /><label for="chugoku">中国</label>
+						<input type="radio" id="shikoku" name="area" value="shikoku" /><label for="shikoku">四国</label>
+						<input type="radio" id="kyushu" name="area" value="kyushu" /><label for="kyushu">九州</label>
+						<input type="radio" id="oversea" name="area" value="oversea" /><label for="oversea">海外</label>
+					</div>
+				</div>
+				<div style="margin-top: 30px; display: flex; justify-content: center;">
+					<div style="display: grid; align-content: center; width: 120px;">顧客都道府県</div>
+					<div style="text-align: left; width: 420px;" class="prefecture-input">
+						<span style="font-weight: bold;">北海道</span>
+						<input type="radio" id="hokkaido-hokkaido" name="prefecture" value="hokkaido-hokkaido" /><label for="hokkaido-hokkaido">北海道</label><br />
+						<span style="font-weight: bold;">東北</span>
+						<input type="radio" id="tohoku-aomori" name="prefecture" value="tohoku-aomori" /><label for="tohoku-aomori">青森県</label>
+						<input type="radio" id="tohoku-iwate" name="prefecture" value="tohoku-iwate" /><label for="tohoku-iwate">岩手県</label>
+						<input type="radio" id="tohoku-miyagi" name="prefecture" value="tohoku-miyagi" /><label for="tohoku-miyagi">宮城県</label>
+						<input type="radio" id="tohoku-akita" name="prefecture" value="tohoku-akita" /><label for="tohoku-akita">秋田県</label>
+						<input type="radio" id="tohoku-yamagata" name="prefecture" value="tohoku-yamagata" /><label for="tohoku-yamagata">山形県</label>
+						<input type="radio" id="tohoku-fukushima" name="prefecture" value="tohoku-fukushima" /><label for="tohoku-fukushima">福島県</label><br />
+						<span style="font-weight: bold;">関東</span>
+						<input type="radio" id="kanto-ibaraki" name="prefecture" value="kanto-ibaraki" /><label for="kanto-ibaraki">茨城県</label>
+						<input type="radio" id="kanto-tochigi" name="prefecture" value="kanto-tochigi" /><label for="kanto-tochigi">栃木県</label>
+						<input type="radio" id="kanto-gunma" name="prefecture" value="kanto-gunma" /><label for="kanto-gunma">群馬県</label>
+						<input type="radio" id="kanto-saitama" name="prefecture" value="kanto-saitama" /><label for="kanto-saitama">埼玉県</label>
+						<input type="radio" id="kanto-chiba" name="prefecture" value="kanto-chiba" /><label for="kanto-chiba">千葉県</label>
+						<input type="radio" id="kanto-tokyo" name="prefecture" value="kanto-tokyo" /><label for="kanto-tokyo">東京都</label>
+						<input type="radio" id="kanto-kanagawa" name="prefecture" value="kanto-kanagawa" /><label for="kanto-kanagawa">神奈川県</label><br />
+						<span style="font-weight: bold;">北陸</span>
+						<input type="radio" id="hokuriku-toyama" name="prefecture" value="hokuriku-toyama" /><label for="hokuriku-toyama">富山県</label>
+						<input type="radio" id="hokuriku-ishikawa" name="prefecture" value="hokuriku-ishikawa" /><label for="hokuriku-ishikawa">石川県</label>
+						<input type="radio" id="hokuriku-fukui" name="prefecture" value="hokuriku-fukui" /><label for="hokuriku-fukui">福井県</label><br />
+						<span style="font-weight: bold;">甲信越</span>
+						<input type="radio" id="koshinetsu-niigata" name="prefecture" value="koshinetsu-niigata" /><label for="koshinetsu-niigata">新潟県</label>
+						<input type="radio" id="koshinetsu-yamanashi" name="prefecture" value="koshinetsu-yamanashi" /><label for="koshinetsu-yamanashi">山梨県</label>
+						<input type="radio" id="koshinetsu-nagano" name="prefecture" value="koshinetsu-nagano" /><label for="koshinetsu-nagano">長野県</label><br />
+						<span style="font-weight: bold;">東海</span>
+						<input type="radio" id="tokai-gifu" name="prefecture" value="tokai-gifu" /><label for="tokai-gifu">岐阜県</label>
+						<input type="radio" id="tokai-shizuoka" name="prefecture" value="tokai-shizuoka" /><label for="tokai-shizuoka">静岡県</label>
+						<input type="radio" id="tokai-aichi" name="prefecture" value="tokai-aichi" /><label for="tokai-aichi">愛知県</label>
+						<input type="radio" id="tokai-mie" name="prefecture" value="tokai-mie" /><label for="tokai-mie">三重県</label><br />
+						<span style="font-weight: bold;">近畿</span>
+						<input type="radio" id="kinki-shiga" name="prefecture" value="kinki-shiga" /><label for="kinki-shiga">滋賀県</label>
+						<input type="radio" id="kinki-kyoto" name="prefecture" value="kinki-kyoto" /><label for="kinki-kyoto">京都府</label>
+						<input type="radio" id="kinki-osaka" name="prefecture" value="kinki-osaka" /><label for="kinki-osaka">大阪府</label>
+						<input type="radio" id="kinki-hyogo" name="prefecture" value="kinki-hyogo" /><label for="kinki-hyogo">兵庫県</label>
+						<input type="radio" id="kinki-nara" name="prefecture" value="kinki-nara" /><label for="kinki-nara">奈良県</label>
+						<input type="radio" id="kinki-wakayama" name="prefecture" value="kinki-wakayama" /><label for="kinki-wakayama">和歌山県</label><br />
+						<span style="font-weight: bold;">中国</span>
+						<input type="radio" id="chugoku-tottori" name="prefecture" value="chugoku-tottori" /><label for="chugoku-tottori">鳥取県</label>
+						<input type="radio" id="chugoku-shimane" name="prefecture" value="chugoku-shimane" /><label for="chugoku-shimane">島根県</label>
+						<input type="radio" id="chugoku-okayama" name="prefecture" value="chugoku-okayama" /><label for="chugoku-okayama">岡山県</label>
+						<input type="radio" id="chugoku-hiroshima" name="prefecture" value="chugoku-hiroshima" /><label for="chugoku-hiroshima">広島県</label>
+						<input type="radio" id="chugoku-yamaguchi" name="prefecture" value="chugoku-yamaguchi" /><label for="chugoku-yamaguchi">山口県</label><br />
+						<span style="font-weight: bold;">四国</span>
+						<input type="radio" id="shikoku-tokushima" name="prefecture" value="shikoku-tokushima" /><label for="shikoku-tokushima">徳島県</label>
+						<input type="radio" id="shikoku-kagawa" name="prefecture" value="shikoku-kagawa" /><label for="shikoku-kagawa">香川県</label>
+						<input type="radio" id="shikoku-ehime" name="prefecture" value="shikoku-ehime" /><label for="shikoku-ehime">愛媛県</label>
+						<input type="radio" id="shikoku-kochi" name="prefecture" value="shikoku-kochi" /><label for="shikoku-kochi">高知県</label><br />
+						<span style="font-weight: bold;">九州</span>
+						<input type="radio" id="kyushu-fukuoka" name="prefecture" value="kyushu-fukuoka" /><label for="kyushu-fukuoka">福岡県</label>
+						<input type="radio" id="kyushu-saga" name="prefecture" value="kyushu-saga" /><label for="kyushu-saga">佐賀県</label>
+						<input type="radio" id="kyushu-nagasaki" name="prefecture" value="kyushu-nagasaki" /><label for="kyushu-nagasaki">長崎県</label>
+						<input type="radio" id="kyushu-kumamoto" name="prefecture" value="kyushu-kumamoto" /><label for="kyushu-kumamoto">熊本県</label>
+						<input type="radio" id="kyushu-oita" name="prefecture" value="kyushu-oita" /><label for="kyushu-oita">大分県</label>
+						<input type="radio" id="kyushu-miyazaki" name="prefecture" value="kyushu-miyazaki" /><label for="kyushu-miyazaki">宮崎県</label>
+						<input type="radio" id="kyushu-kagoshima" name="prefecture" value="kyushu-kagoshima" /><label for="kyushu-kagoshima">鹿児島県</label>
+						<input type="radio" id="kyushu-okinawa" name="prefecture" value="kyushu-okinawa" /><label for="kyushu-okinawa">沖縄県</label><br />
+						<span style="font-weight: bold;">海外</span>
+						<input type="radio" id="oversea" name="prefecture" value="oversea" /><label for="oversea">海外</label>
+					</div>
+				</div>
+				<div style="margin-top: 30px; display: flex; justify-content: center;">
+					<div style="display: grid; align-content: center; width: 120px;">問い合わせ分類</div>
+					<div style="text-align: left; width: 420px;" class="status-input">
+						<input type="radio" id="category_product" name="category" value="category_product" /><label for="category_product">商品情報</label>
+						<input type="radio" id="category_delivery" name="category" value="category_delivery" /><label for="category_delivery">配送</label>
+						<input type="radio" id="category_return" name="category" value="category_return" /><label for="category_return">返品</label>
+						<input type="radio" id="category_others" name="category" value="category_others" /><label for="category_others">その他</label>
+					</div>
+				</div>
+				<div style="margin-top: 30px; display: flex; justify-content: center;">
+					<div style="display: grid; align-content: center; width: 120px;">背景</div>
+					<div style="text-align: left; width: 420px;">
+						<textarea style="width: 400px; height: 100px;"></textarea>
+					</div>
+				</div>
+				<div style="margin-top: 30px; display: flex; justify-content: center;">
+					<div style="display: grid; align-content: center; width: 120px;">問い合わせ内容</div>
+					<div style="text-align: left; width: 420px;">
+						<textarea style="width: 400px; height: 100px;"></textarea>
+					</div>
+				</div>
+				<div style="margin-top: 30px; display: flex; justify-content: center;">
+					<div style="display: grid; align-content: center; width: 120px;">対応内容</div>
+					<div style="text-align: left; width: 420px;">
+						<textarea style="width: 400px; height: 100px;"></textarea>
+					</div>
+				</div>
+				<div style="margin-top: 30px; display: flex; justify-content: center;">
+					<div style="display: grid; align-content: center; width: 120px;">備考</div>
+					<div style="text-align: left; width: 420px;">
+						<textarea style="width: 400px; height: 100px;"></textarea>
+					</div>
+				</div>
+				<div style="margin-top: 30px;">
+					<div>
+						<a href="javascript:void(0)" onclick="alert('顧客検索ボタンがクリックされました。');" class="button">顧客検索</a>
+						<a href="javascript:void(0)" onclick="alert('メール送信ボタンがクリックされました。');" class="button">メール送信</a>
+						<a href="javascript:void(0)" onclick="alert('登録ボタンがクリックされました。');" class="button">登録</a>
+					</div>
+				</div>
+				<p style="margin-top: 30px; color: #999;">練習用のフォームです。登録はできません。</p>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
