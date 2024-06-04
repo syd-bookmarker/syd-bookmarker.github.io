@@ -40,7 +40,7 @@
 		str = str.replace(/\r?\n/g, ' ').replaceAll('&', "&amp;").replaceAll('"', "&quot;").replaceAll('<', "&lt;").replaceAll('>', "&gt;");
 		str = '<a href="' + str + '">ブックマークレット</a>';
 		if (document.querySelector("#with-all").checked) {
-			str = '<html>\n<head>\n<title>ブックマークレット</title>\n</head>\n<body>\n' + str + '<br />\n上のリンクをブックマークバーへドラッグしてください。\n</body>';
+			str = '<html>\n<head>\n<title>ブックマークレット</title>\n</head>\n<body>\n' + str + '<br />\n上のリンクをブックマークバーへドラッグしてください。\n</body>\n</html>';
 		}
 		document.querySelector("#output-textarea").value = str;
 	});
